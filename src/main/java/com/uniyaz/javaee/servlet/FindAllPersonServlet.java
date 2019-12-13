@@ -1,4 +1,4 @@
-package com.uniyaz.javaee;
+package com.uniyaz.javaee.servlet;
 
 import javax.servlet.*;
 import java.io.IOException;

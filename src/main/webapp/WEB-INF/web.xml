@@ -3,11 +3,22 @@
         "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
+
     <display-name>Archetype Created Web Application</display-name>
+
+    <filter>
+        <filter-name>UtfFilter</filter-name>
+        <filter-class>com.uniyaz.javaee.filter.UtfFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>UtfFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 
     <servlet>
         <servlet-name>PersonList</servlet-name>
-        <servlet-class>com.uniyaz.javaee.FindAllPersonServlet</servlet-class>
+        <servlet-class>com.uniyaz.javaee.servlet.FindAllPersonServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -17,7 +28,7 @@
 
     <servlet>
         <servlet-name>SavePerson</servlet-name>
-        <servlet-class>com.uniyaz.javaee.SavePersonServlet</servlet-class>
+        <servlet-class>com.uniyaz.javaee.servlet.SavePersonServlet</servlet-class>
     </servlet>
     
     <servlet-mapping>
